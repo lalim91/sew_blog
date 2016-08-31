@@ -16,7 +16,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.5/angular-route.js"></script>
 
     <!--Style Sheets-->
     <link href="style.css" type="text/css" rel="stylesheet"/>
@@ -24,7 +25,20 @@
     <!--JS Scripts-->
     <script src="script.js"></script>
 </head>
-<body>
+<body  ng-app="sewApp">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navController as navCtrl">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">{{navCtrl.title}}</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#">{{navCtrl.home}}</a></li>
+                <li><a href="#" class="glyphicon glyphicon-edit"></a></li>
+            </ul>
+        </div>
+    </nav>
+
 
 </body>
 </html>
